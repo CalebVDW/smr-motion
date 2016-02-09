@@ -1,0 +1,5 @@
+LIBRARY "UnrealAPI"
+EXPORTS
+	SmrGetBoneOrientation
+	SmrUpdateBones
+	SmrInitializeBones
