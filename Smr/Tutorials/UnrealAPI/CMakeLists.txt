@@ -35,7 +35,7 @@ ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 #
 
 
-ADD_LIBRARY(UnrealAPI SHARED UnrealAPI.cpp UnrealAPI.h UnrealAPI.def)
+ADD_LIBRARY(UnrealAPI SHARED UnrealAPI.cpp UnrealAPI.h)
 
 IF(UNIX)
   IF(APPLE)
