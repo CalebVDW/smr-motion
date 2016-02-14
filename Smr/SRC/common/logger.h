@@ -14,7 +14,13 @@
 
 using namespace log4cplus;
 
+//This preprocessor branch encodes the string literal differntly if the code is being run from Unreal 
+#ifdef UNREAL_SMR_BINDING
+log4cplus::tstring name = L"main";
+static Logger logger = Logger::getInstance(name);
+#else
 static Logger logger = Logger::getInstance("main");
+#endif
 static BasicConfigurator config;
 
 #define    LOG_TRACE LOG4CPLUS_TRACE
