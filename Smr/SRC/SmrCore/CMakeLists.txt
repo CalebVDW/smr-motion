@@ -11,7 +11,7 @@ INCLUDE_DIRECTORIES(
 	    ${SAMSARA_IO_SOURCE_DIR}	    
 	    ${LOG4CPLUS_INCLUDE_DIR})
 
-ADD_LIBRARY(core STATIC 
+ADD_LIBRARY(core SHARED 
 			SmrBlender.cpp
 			SmrJoint.cpp
 			SmrKinematicJoint.cpp
@@ -53,7 +53,7 @@ ADD_LIBRARY(core STATIC
 
 LINK_DIRECTORIES(${LIBRARY_OUTPUT_PATH})
 
-TARGET_LINK_LIBRARIES(core common newmat)
+TARGET_LINK_LIBRARIES(core common newmat log4cplusD)
 
 SOURCE_GROUP(Headers REGULAR_EXPRESSION "[.]h$")
 

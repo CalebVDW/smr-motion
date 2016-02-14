@@ -15,7 +15,7 @@ INCLUDE_DIRECTORIES(
         ${GLFW_INCLUDE_DIR}
         ${LOG4CPLUS_INCLUDE_DIR})
 
-ADD_LIBRARY(utils STATIC 
+ADD_LIBRARY(utils SHARED 
 			SmrUtils.cpp
 			HordeCamera.cpp
 			HordeWindow.cpp
@@ -36,7 +36,7 @@ ADD_LIBRARY(utils STATIC
 
 LINK_DIRECTORIES(${LIBRARY_OUTPUT_PATH})
 
-TARGET_LINK_LIBRARIES(utils common newmat glfw Horde3D Horde3DUtils ${OPENGL_LIBRARIES})
+TARGET_LINK_LIBRARIES(utils common newmat glfw Horde3D Horde3DUtils log4cplusD ${OPENGL_LIBRARIES})
 
 SOURCE_GROUP(Headers REGULAR_EXPRESSION "[.]h$")
 

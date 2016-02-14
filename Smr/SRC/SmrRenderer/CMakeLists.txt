@@ -10,7 +10,7 @@ INCLUDE_DIRECTORIES(
 			${SAMSARA_COMMON_SOURCE_DIR}
 			${LOG4CPLUS_INCLUDE_DIR})
 
-ADD_LIBRARY(renderer STATIC
+ADD_LIBRARY(renderer SHARED
 			SmrSimpleRenderer.cpp
 			SmrBasicRenderer.cpp
 			Shaders.cpp
@@ -21,5 +21,6 @@ ADD_LIBRARY(renderer STATIC
 			Shaders.h
 )
 
-
+LINK_DIRECTORIES(${LIBRARY_OUTPUT_PATH})
+TARGET_LINK_LIBRARIES(log4cplusD)
 SOURCE_GROUP(Headers REGULAR_EXPRESSION "[.]h$")

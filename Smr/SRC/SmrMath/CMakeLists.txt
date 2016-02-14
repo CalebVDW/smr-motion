@@ -8,7 +8,7 @@ INCLUDE_DIRECTORIES(
 		    ${LOG4CPLUS_INCLUDE_DIR}
 		   )
 
-ADD_LIBRARY(math STATIC
+ADD_LIBRARY(math SHARED
 			SmrPCA.cpp
 			SmrDTW.cpp
 			SmrRandom.cpp
@@ -21,6 +21,8 @@ ADD_LIBRARY(math STATIC
 			SmrQuaternion.h
 			SmrParticleFilter.h)
 
+LINK_DIRECTORIES(${LIBRARY_OUTPUT_PATH})
+TARGET_LINK_LIBRARIES(log4cplusD)
 
 SOURCE_GROUP(Inline REGULAR_EXPRESSION "[.]inl$")
 SOURCE_GROUP(Headers REGULAR_EXPRESSION "[.]h$")

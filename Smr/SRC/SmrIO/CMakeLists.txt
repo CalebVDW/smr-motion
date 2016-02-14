@@ -10,7 +10,7 @@ INCLUDE_DIRECTORIES(
 	    ${SAMSARA_MATH_SOURCE_DIR}
 	    ${LOG4CPLUS_INCLUDE_DIR})
 
-ADD_LIBRARY(io STATIC 
+ADD_LIBRARY(io SHARED 
 			SmrLoaderBvh.cpp
 			SmrExporterBvh.cpp
 			SmrExporterAcclaim.cpp
@@ -24,7 +24,7 @@ ADD_LIBRARY(io STATIC
 
 LINK_DIRECTORIES(${LIBRARY_OUTPUT_PATH})
 
-TARGET_LINK_LIBRARIES(io common newmat)
+TARGET_LINK_LIBRARIES(io common newmat log4cplusD)
 
 SOURCE_GROUP(Headers REGULAR_EXPRESSION "[.]h$")
 
