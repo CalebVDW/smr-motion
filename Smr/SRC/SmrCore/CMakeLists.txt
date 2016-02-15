@@ -53,7 +53,7 @@ ADD_LIBRARY(core SHARED
 
 LINK_DIRECTORIES(${LIBRARY_OUTPUT_PATH})
 
-TARGET_LINK_LIBRARIES(core common newmat log4cplusD)
+TARGET_LINK_LIBRARIES(core common newmat log4cplus)
 
 SOURCE_GROUP(Headers REGULAR_EXPRESSION "[.]h$")
 
