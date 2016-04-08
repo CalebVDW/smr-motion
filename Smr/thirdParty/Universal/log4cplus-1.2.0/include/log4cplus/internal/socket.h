@@ -74,6 +74,15 @@ namespace helpers {
 typedef SOCKET os_socket_type;
 os_socket_type const INVALID_OS_SOCKET_VALUE = INVALID_SOCKET;
 
+WINSOCK_API_LINKAGE
+VOID
+WSAAPI
+FreeAddrInfoW(
+	_In_opt_        PADDRINFOW      pAddrInfo
+	);
+
+#define FreeAddrInfoA   freeaddrinfo
+
 struct ADDRINFOT_deleter
 {
     void

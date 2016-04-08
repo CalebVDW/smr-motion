@@ -34,8 +34,12 @@
 #ifdef LOG4CPLUS_HAVE_SYS_STAT_H
 #include <sys/stat.h>
 #endif
+
+#ifndef _WIN32
 #include <sys/stat.h>
 #include <unistd.h>
+#endif
+
 #ifdef LOG4CPLUS_HAVE_STDLIB_H
 #include <stdlib.h>
 #endif
