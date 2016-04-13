@@ -62,14 +62,13 @@ Logger::getCurrentLoggers ()
     return getDefaultHierarchy ().getCurrentLoggers ();
 }
 
-
 Logger 
 Logger::getInstance (const log4cplus::tstring& name) 
 { 
     return getDefaultHierarchy().getInstance(name); 
 }
 
-Logger Logger::getInstance(){return getInstance(L"main");}
+Logger Logger::getInstance(){return getInstance("main");}
 
 Logger 
 Logger::getInstance (const log4cplus::tstring& name,
